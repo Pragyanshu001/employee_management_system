@@ -168,13 +168,13 @@ export default function AssignTask() {
       <CustomModal isOpen={isOpen} onClose={onOpenChange} />
 
       <div className="flex py-3 px-10 items-center justify-between bg-white rounded-2xl h-20">
-        <div className="text-3xl text-blue-900 font-semibold s   flex ">
+        <div className="sm:text-3xl text-2xl text-blue-900 font-semibold s   flex ">
           Create New Employee
         </div>
 
         <button
           onClick={onOpen}
-          className=" font-semibold transition duration-300 ease-in-out hover:shadow-md hover:scale-105 text-white hover:bg-cyan-700  cursor-pointer bg-cyan-600 rounded-full h-[70%] w-[15%] "
+          className=" font-semibold transition duration-300 ease-in-out hover:shadow-md hover:scale-105 text-white hover:bg-cyan-700  cursor-pointer bg-cyan-600 rounded-xl sm:rounded-full h-[70%] min-w-15 w-[15%] "
         >
           Create
         </button>

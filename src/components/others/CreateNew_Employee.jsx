@@ -144,12 +144,12 @@ const CreateNew_Employee = () => {
           <div className=" flex justify-center">
             <button
               className=" transition duration-300 ease-in-out hover:shadow-md hover:scale-105 text-white hover:bg-emerald-500  cursor-pointer 
-              mb-4 flex justify-center w-[40%] font-semibold py-2 rounded bg-emerald-400 mt-7"
+              mb-7 flex justify-center w-[40%] font-semibold py-2 rounded bg-emerald-400 mt-7"
             >
               Create Employee
             </button>
             <button
-              className="  transition duration-300 ease-in-out hover:shadow-md hover:scale-105 text-white hover:bg-cyan-950  cursor-pointer bg-cyan-900 mb-4 ml-5 font-semibold flex justify-center w-[20%] py-2 rounded mt-7"
+              className=" items-center transition duration-300 ease-in-out hover:shadow-md hover:scale-105 text-white hover:bg-cyan-950  cursor-pointer bg-cyan-900 mb-7 ml-5 font-semibold flex justify-center w-[20%] md:py-2 py-0 rounded mt-7"
               type="reset"
               onClick={() => {
                 setName("");

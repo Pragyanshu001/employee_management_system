@@ -128,14 +128,14 @@ const CreateTask = () => {
         />
 
         {/* Dates */}
-        <div className="flex justify-between">
+        <div className="flex gap-3 md:flex-row flex-col justify-between">
           <input
             readOnly
             value={new Date().toLocaleString("en-IN", {
               dateStyle: "medium",
               timeStyle: "short",
             })}
-            className="w-1/3 bg-gray-200 p-2 rounded text-center"
+            className=" min-px-1 bg-gray-200 p-2 rounded text-center"
           />
           <DatePicker
             showTimeSelect
@@ -145,7 +145,7 @@ const CreateTask = () => {
             selected={dueDate}
             onChange={setDueDate}
             placeholderText="Select Due Date & Time"
-            className="px-30 bg-gray-200 p-2 rounded focus:ring-2 focus:ring-blue-400"
+            className="min-px-1 text-center bg-gray-200 p-2 rounded focus:ring-2 focus:ring-blue-400"
           />
         </div>
 
@@ -194,7 +194,7 @@ const CreateTask = () => {
           <button
             type="button"
             onClick={resetForm}
-            className="bg-cyan-900 py-2 px-6 rounded text-white hover:bg-cyan-800"
+            className="bg-cyan-900 py-2 px-3 md:px-6 rounded text-white hover:bg-cyan-800"
           >
             RESET
           </button>

@@ -5,12 +5,16 @@ import TaskList from "../others/TaskList";
 
 const EmployeeDashBoard = () => {
   return (
+    // <div
+    //   className="w-[100vw] h-[100vh] p-5"
+    //   style={{ backgroundImage: `url(${background})` }}
+    // >
     <div
-      className=" p-5 bg-cover bg-center "
+      className="w-[100vw] h-[100%] bg-center bg-cover p-5 bg-no-repeat"
       style={{ backgroundImage: `url(${background})` }}
     >
       <Header />
-      <div className=" bg-blue-100 rounded-3xl p-5 mt-1">
+      <div className=" bg-blue-200 rounded-3xl p-5 mt-1">
         <TaskListNumbers />
         <TaskList />
       </div>

@@ -57,17 +57,15 @@ const Login = () => {
 
   return (
     <div
-      className="flex justify-center items-center bg-center w-full h-screen bg-cover bg-no-repeat"
+      className="flex justify-center  items-center bg-center w-[100vw] h-screen bg-cover bg-no-repeat"
       style={{ backgroundImage: `url(${background})` }}
     >
       <div
-        className=" rounded-2xl flex justify-end items-center h-[85%] w-[60%] bg-center bg-cover "
+        className=" rounded-2xl flex justify-end items-center max-md:hidden h-[85%] w-[60%] bg-left bg-cover "
         style={{ backgroundImage: `url(${secondLayer})` }}
       >
-        <div className="w-[35%] flex flex-col justify-center items-center rounded-2xl bg-gray-50 lg:px-12 lg:py-10 mt-50 lg:mt-30 lg:mr-10 mr-3 px-3 py-23 mb-30">
-          <h2 className="lg:mt-10 text-4xl lg:text-6xl font-bold text-blue-900  lg:mb-6">
-            Login
-          </h2>
+        <div className="w-[35%] flex flex-col justify-center items-center rounded-2xl bg-gray-50 mt-50 lg:mt-30 lg:mr-10 mr-3 px-3 py-15 mb-30">
+          <h2 className="text-6xl  font-bold text-blue-900  lg:mb-6">Login</h2>
           <form
             onSubmit={submitHandler}
             className="flex flex-col w-full max-w-sm space-y-4"
@@ -78,7 +76,7 @@ const Login = () => {
               type="email"
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter email"
-              className="transform ease-in duration-75 hover:scale-[1.01] hover:bg-blue-50 font-semibold hover:text-black mt-5 lg:mt-10 border bg-gray-200 border-gray-300 rounded-md px-1 py-1 lg:px-4 lg:py-3 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="transform ease-in duration-75 hover:scale-[1.01] hover:bg-blue-50 font-semibold hover:text-black mt-5  border bg-gray-200 border-gray-300 rounded-md px-1 py-1 lg:px-4 lg:py-3 focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
 
             <input
@@ -87,17 +85,49 @@ const Login = () => {
               type="password"
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Enter password"
-              className="transform ease-in duration-75 hover:scale-[1.01] hover:bg-blue-50 font-semibold hover:text-black lg:mt-7 bg-gray-200 border border-gray-300 rounded-md px-1 py-1 lg:px-4 lg:py-3 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="transform ease-in duration-75 hover:scale-[1.01] hover:bg-blue-50 font-semibold hover:text-black bg-gray-200 border border-gray-300 rounded-md px-1 py-1 lg:px-4 lg:py-3 focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
 
             <button
               type="submit"
-              className=" duration-300 ease-in-out hover:shadow-md hover:scale-[1.01] cursor-pointer lg:mt-10 bg-yellow-400 hover:bg-yellow-500 transition-colors text-white font-semibold rounded-md py-3"
+              className=" duration-300 ease-in-out hover:shadow-md hover:scale-[1.01] cursor-pointer  bg-yellow-400 hover:bg-yellow-500 transition-colors text-white font-semibold rounded-md py-3"
             >
               Login
             </button>
           </form>
         </div>
+      </div>
+      <div className="w-[350px] min-md:hidden flex flex-col justify-center items-center rounded-2xl bg-gray-50 m-auto px-3 py-15 ">
+        <h2 className="text-6xl font-bold text-blue-900">Login</h2>
+        <form
+          onSubmit={submitHandler}
+          className="flex flex-col w-full max-w-sm space-y-4"
+        >
+          <input
+            required
+            value={Email}
+            type="email"
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Enter email"
+            className="transform ease-in duration-75 hover:scale-[1.01] hover:bg-blue-50 font-semibold hover:text-black mt-5 lg:mt-10 border bg-gray-200 border-gray-300 rounded-md px-1 py-1 lg:px-4 lg:py-3 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          />
+
+          <input
+            required
+            value={Password}
+            type="password"
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Enter password"
+            className="transform ease-in duration-75 hover:scale-[1.01] hover:bg-blue-50 font-semibold hover:text-black lg:mt-7 bg-gray-200 border border-gray-300 rounded-md px-1 py-1 lg:px-4 lg:py-3 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          />
+
+          <button
+            type="submit"
+            className=" duration-300 ease-in-out hover:shadow-md hover:scale-[1.01] cursor-pointer lg:mt-10 bg-yellow-400 hover:bg-yellow-500 transition-colors text-white font-semibold rounded-md py-3"
+          >
+            Login
+          </button>
+        </form>
       </div>
     </div>
   );

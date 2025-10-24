@@ -16,10 +16,3 @@ const AdminDashboard = () => {
 };
 
 export default AdminDashboard;
-
-{
-  /* <div
-      className="flex justify-center items-center bg-center w-full h-screen bg-cover bg-no-repeat"
-      style={{ backgroundImage: `url(${background})` }}
-    ></div> */
-}

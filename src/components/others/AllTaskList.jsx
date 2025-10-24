@@ -377,14 +377,20 @@ export default function AllTaskList() {
         setTasks={setTasks}
       />
 
-      <div className="w-full overflow-x-auto shadow-xl rounded-2xl justify-start overflow-auto flex flex-nowrap gap-5 h-75">
+      <div className="w-full overflow-auto shadow-xl rounded-2xl justify-start  flex flex-nowrap lg:gap-5 h-75">
         <table className="min-w-full bg-white border border-gray-300 rounded-lg ">
           <thead className="sticky top-0 z-10">
             <tr className="bg-blue-300 text-gray-700">
-              <th className="py-2 text-center">Tasks</th>
-              <th className="py-2 text-center">Assigned Date</th>
-              <th className="py-2 text-center">Status</th>
-              <th className="py-2 text-center">Category</th>
+              <th className="py-2 min-w-[12rem] h-[5rem] text-center">Tasks</th>
+              <th className="py-2 min-w-[12rem] h-[5rem] text-center">
+                Assigned Date
+              </th>
+              <th className="py-2 min-w-[12rem] h-[5rem] text-center">
+                Status
+              </th>
+              <th className="py-2 min-w-[12rem] h-[5rem] text-center">
+                Category
+              </th>
             </tr>
           </thead>
           <tbody>

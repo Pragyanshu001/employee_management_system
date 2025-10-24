@@ -14,12 +14,12 @@ export function Admin_Tabs() {
   const [activeTab, setActiveTab] = useState("createUser");
   const data = [
     {
-      label: "Create User",
+      label: "Assign Task",
       value: "createUser",
     },
 
     {
-      label: "Assign Task",
+      label: "Create User",
       value: "assignTask",
     },
   ];

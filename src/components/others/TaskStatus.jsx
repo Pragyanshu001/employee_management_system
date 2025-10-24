@@ -31,47 +31,51 @@ const TaskStatus = () => {
 
   if (!data?.id) return <p className="text-center mt-10">missing...</p>;
   return (
-    <div className="flex gap-10 shadow-md items-center45 p-3 rounded-2xl bg-white justify-between ">
+    <div className="flex gap-5 shadow-md items-center p-3 rounded-2xl bg-white justify-between ">
       <img
-        className="transition ease-in duration-200 cursor-pointer hover:scale-105 hover:bg-red-400/75 shadow-md shadow-red-300  size-[12%] rounded-2xl "
+        className="transition ease-in duration-200 cursor-pointer hover:scale-105 hover:bg-red-400/75 shadow-md shadow-red-300 size-[30%] sm:size-auto rounded-2xl "
         src={data.avatar}
       />
 
       <div>
-        <div className="flex bg-white rounded-4xl mt-1 gap-5 justify-between ">
-          <div className="transition ease-in duration-300 cursor-pointer hover:scale-[1px] hover:bg-purple-400/75 flex flex-col items-center shadow-md shadow-purple-300 justify-center rounded-xl w-30 h-30 lg:w-40 lg:h-40 bg-purple-200">
-            <div>
-              <h1 className="w-10 h-10 bg-purple-300  rounded-full flex justify-center text-3xl font-semibold">
-                {data?.taskCount?.newTask || "--"}
+        <div className=" lg:flex-row flex-col flex bg-white rounded-4xl mt-1 gap-5 justify-between ">
+          <div className=" gap-5 flex">
+            <div className="transition ease-in duration-300 cursor-pointer hover:scale-[1px] hover:bg-purple-400/75 flex flex-col items-center shadow-md shadow-purple-300 justify-center rounded-xl w-22 h-22 lg:w-40 lg:h-40 bg-purple-200">
+              <div>
+                <h1 className="lg:w-10 lg:h-10 w-8 h-8 bg-purple-300  rounded-full flex justify-center lg:text-xl text-3xl font-semibold">
+                  {data?.taskCount?.newTask || "--"}
+                </h1>
+              </div>
+              <h1 className="text-medium flex justify-center mt-3 font-medium">
+                NewTask
               </h1>
             </div>
-            <h1 className="text-xl flex justify-center mt-3 font-medium">
-              NewTask
-            </h1>
+            <div className="transition ease-in duration-300 cursor-pointer hover:scale-[1px] hover:bg-blue-400/75 shadow-md shadow-blue-300 flex flex-col items-center justify-center rounded-xl w-22 h-22 lg:w-40 lg:h-40 bg-blue-200">
+              <h1 className="lg:w-10 lg:h-10 w-8 h-8 bg-blue-300 rounded-full flex justify-center lg:text-xl text-3xl font-semibold">
+                {data?.taskCount?.active || "--"}
+              </h1>
+              <h1 className=" text-medium flex justify-center  mt-3 font-medium">
+                Active
+              </h1>
+            </div>
           </div>
-          <div className="transition ease-in duration-300 cursor-pointer hover:scale-[1px] hover:bg-blue-400/75 shadow-md shadow-blue-300 flex flex-col items-center justify-center rounded-xl w-30 h-30 lg:w-40 lg:h-40 bg-blue-200">
-            <h1 className="w-10 h-10 bg-blue-300 rounded-full flex justify-center text-3xl font-semibold">
-              {data?.taskCount?.active || "--"}
-            </h1>
-            <h1 className=" text-xl flex justify-center  mt-3 font-medium">
-              Active
-            </h1>
-          </div>
-          <div className=" transition ease-in duration-300 cursor-pointer hover:scale-[1px] hover:bg-green-400/75 shadow-md shadow-green-300 flex flex-col items-center justify-center rounded-xl w-30 h-30 lg:w-40 lg:h-40 bg-green-200">
-            <h1 className=" w-10 h-10 bg-green-300 rounded-full flex justify-center text-3xl font-semibold">
-              {data?.taskCount?.completed || "--"}
-            </h1>
-            <h1 className=" text-xl flex justify-center  mt-3 font-medium">
-              Completed
-            </h1>
-          </div>
-          <div className="transition ease-in duration-300 cursor-pointer hover:scale-[1px] hover:bg-red-400/75 shadow-md shadow-red-300 flex flex-col items-center justify-center rounded-xl w-30 h-30 lg:w-40 lg:h-40 bg-red-200">
-            <h1 className=" w-10 h-10 bg-red-300 rounded-full flex justify-center text-3xl font-semibold">
-              {data?.taskCount?.failed || "--"}
-            </h1>
-            <h1 className=" text-xl flex justify-center  mt-3 font-medium">
-              Failed
-            </h1>
+          <div className=" gap-5 flex">
+            <div className=" transition ease-in duration-300 cursor-pointer hover:scale-[1px] hover:bg-green-400/75 shadow-md shadow-green-300 flex flex-col items-center justify-center rounded-xl w-22 h-22 lg:w-40 lg:h-40 bg-green-200">
+              <h1 className=" lg:w-10 lg:h-10 w-8 h-8 bg-green-300 rounded-full flex justify-center lg:text-xl text-3xl font-semibold">
+                {data?.taskCount?.completed || "--"}
+              </h1>
+              <h1 className=" text-medium flex justify-center  mt-3 font-medium">
+                Completed
+              </h1>
+            </div>
+            <div className="transition ease-in duration-300 cursor-pointer hover:scale-[1px] hover:bg-red-400/75 shadow-md shadow-red-300 flex flex-col items-center justify-center rounded-xl w-22 h-22 lg:w-40 lg:h-40 bg-red-200">
+              <h1 className=" lg:w-10 lg:h-10 w-8 h-8 bg-red-300 rounded-full flex justify-center lg:text-xl text-3xl font-semibold">
+                {data?.taskCount?.failed || "--"}
+              </h1>
+              <h1 className=" text-medium flex justify-center  mt-3 font-medium">
+                Failed
+              </h1>
+            </div>
           </div>
         </div>
       </div>
