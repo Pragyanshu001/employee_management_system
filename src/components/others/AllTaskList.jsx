@@ -41,7 +41,7 @@ function TaskModal({ isOpen, onClose, task, setTasks }) {
       const updateTaskCount = {
         ...employee.taskCount,
         active: (employee.taskCount?.active || 1) - 1,
-        completed: (employee.taskCount?.failed || 0) + 1,
+        completed: (employee.taskCount?.completed || 0) + 1,
       };
 
       const updatedEmployee = {
@@ -59,6 +59,7 @@ function TaskModal({ isOpen, onClose, task, setTasks }) {
       );
 
       const data = await res.json();
+      console.log(data);
 
       const updatedEmployees = employees.map((emp) =>
         emp.id === data.id ? data : emp

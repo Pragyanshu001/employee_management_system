@@ -33,7 +33,7 @@ const TaskStatus = () => {
   return (
     <div className="flex gap-5 shadow-md items-center p-3 rounded-2xl bg-white justify-between ">
       <img
-        className="transition ease-in duration-200 cursor-pointer hover:scale-105 hover:bg-red-400/75 shadow-md shadow-red-300 size-[30%] sm:size-auto rounded-2xl "
+        className="transition ease-in duration-200 cursor-pointer hover:scale-105 hover:bg-red-400/75 shadow-md shadow-red-300 w-22 h-22 sm:w-40 sm:h-40 rounded-2xl "
         src={data.avatar}
       />
 

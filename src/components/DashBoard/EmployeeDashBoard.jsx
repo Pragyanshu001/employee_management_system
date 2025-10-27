@@ -10,7 +10,7 @@ const EmployeeDashBoard = () => {
     //   style={{ backgroundImage: `url(${background})` }}
     // >
     <div
-      className="w-[100vw] h-[100%] bg-center bg-cover p-5 bg-no-repeat"
+      className="w-[100%] h-[100%] sm:h-screen bg-center bg-cover p-5 bg-no-repeat"
       style={{ backgroundImage: `url(${background})` }}
     >
       <Header />
